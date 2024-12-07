@@ -1,0 +1,130 @@
+/* Estilo básico para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;  /* Establece la tipografía de la página */
+    margin: 0;  /* Elimina el margen predeterminado del navegador */
+    padding: 0;  /* Elimina el padding predeterminado del navegador */
+    background-color: #fdfbfa;  /* Establece el color de fondo para la página */
+}
+
+/* Estilo para el contenedor del menú */
+.menu {
+    width: 300px;  /* Define el ancho del menú */
+    background-color: #f03e3e;  /* Establece el color de fondo del menú */
+    height: 100vh;  /* Hace que el menú ocupe toda la altura de la pantalla */
+    position: fixed;  /* Fija el menú a la izquierda de la página */
+    top: 0;  /* Ubica el menú en la parte superior de la página */
+    left: 0;  /* Ubica el menú en la parte izquierda de la página */
+    padding-top: 20px;  /* Agrega espacio en la parte superior del menú */
+}
+
+/* Estilo para los enlaces dentro del menú */
+.menu a {
+    color: white;  /* Establece el color del texto de los enlaces */
+    text-decoration: none;  /* Elimina el subrayado de los enlaces */
+    display: block;  /* Hace que los enlaces se comporten como bloques */
+    padding: 10px 20px;  /* Agrega padding dentro de los enlaces */
+    border-bottom: 5px solid #444;  /* Añade una línea divisoria debajo de cada enlace */
+    border-radius: 20px;
+}
+
+/* Estilo para los enlaces cuando el usuario pasa el cursor */
+.menu a:hover {
+    background-color: #575757;  /* Cambia el color de fondo cuando el usuario pasa el cursor */
+}
+
+/* Estilo para el contenido principal (fuera del menú) */
+.main-content {
+    margin-left: 220px;  /* Agrega un margen a la izquierda para que el contenido no quede debajo del menú */
+    padding: 20px;  /* Agrega espacio interno al contenido */
+}
+
+/* Estilo para los enlaces dentro del menú, con una posición relativa para el tooltip */
+.menu a {
+    position: relative;  /* Permite que los elementos dentro del enlace se posicionen de manera relativa */
+    display: block;  /* Hace que los enlaces se comporten como bloques */
+    padding: 10px;  /* Agrega padding dentro de los enlaces */
+    text-decoration: none;  /* Elimina el subrayado de los enlaces */
+    color: #fcf9f9;  /* Establece el color del texto */
+}
+
+/* Estilo para el cuadro emergente de descripción (tooltip) */
+.menu a .tooltip {
+    visibility: hidden;  /* El tooltip estará oculto por defecto */
+    background-color: #fd7d78;  /* Establece el color de fondo del tooltip */
+    color: #0e0d0d;  /* Establece el color del texto del tooltip */
+    text-align: center;  /* Centra el texto dentro del tooltip */
+    border-radius: 5px;  /* Redondea las esquinas del tooltip */
+    padding: 5px;  /* Agrega espacio interno al tooltip */
+    position: absolute;  /* Posiciona el tooltip de manera absoluta dentro del enlace */
+    z-index: 9999;  /* Asegura que el tooltip se muestre por encima de otros elementos */
+    left: 100%;  /* Posiciona el tooltip a la derecha del enlace */
+    top: 50%;  /* Coloca el tooltip a la mitad de la altura del enlace */
+    margin-left: 10px;  /* Añade espacio entre el enlace y el tooltip */
+    opacity: 0;  /* Hace que el tooltip esté completamente transparente */
+    transition: opacity 0.3s ease;  /* Agrega una transición suave de opacidad cuando se muestra */
+    width: 200px;  /* Define el ancho del tooltip */
+    font-size: 12px;  /* Define el tamaño de la fuente dentro del tooltip */
+}
+
+/* Estilo para mostrar el tooltip cuando el usuario pasa el cursor sobre el enlace */
+.menu a:hover .tooltip {
+    visibility: visible;  /* Hace visible el tooltip cuando el usuario pasa el cursor */
+    opacity: 1;  /* Establece la opacidad del tooltip a 1 (totalmente visible) */
+}
+/* Estilos para el spinner */
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+/* Animación de rotación */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Estilo del contenedor de spinner y mensaje */
+.spinner-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    text-align: center;
+}
+
+.spinner-container p {
+    color: white;
+    margin-top: 20px;
+}
+
+/* Estilo para el contenido principal */
+.main-content {
+    position: absolute;  /* Posiciona el div de manera absoluta */
+    top: 0;           /* Se ubica a 20px desde la parte superior */
+    right: 10px;         /* Se ubica a 20px desde el borde derecho */
+    padding: 5px;       /* Espaciado interno */
+}
+
+/* Estilos para el botón logout (sin cambio de color al pasar el ratón) */
+.logout-btn {
+    background-color: #4CAF50; /* Color original del botón */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Sin cambio de color en hover */
+.logout-btn:hover {
+    background-color: #4CAF50; /* Mantener el color original */
+}

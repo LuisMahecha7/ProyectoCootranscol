@@ -1,0 +1,15 @@
+{
+    "name": "luismahecha/proyecto-cootranscol",
+    "autoload": {
+        "psr-4": {
+            "Luismahecha\\ProyectoCootranscol\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Luis Mahecha",
+            "email": "luis.mahecha01@uptc.edu.co"
+        }
+    ],
+    "require": {}
+}

@@ -1,0 +1,82 @@
+body
+{
+    background: linear-gradient(
+        90deg,
+        rgb(20, 161, 84) 25%,
+        rgb(118, 228, 195) 73%)
+}
+#encabezado
+{
+    width:1000px;
+    height:130px;
+    background-color: red;
+    margin:0 auto;
+    text-align: center;
+    font-size: 50px;
+}
+#principal
+{
+    width: 1000px;
+    margin-top: 20px;
+    height: auto;
+    background-color: aqua;
+    margin: 0 auto;
+
+}
+#form
+{
+    margin-top: 20px;
+    float: right;
+    /*border:outset 1px;*/
+    width: 300px;
+    height: auto;
+}
+#form input
+{
+    float: right;
+    margin-right: 30px;
+    width: 140px;
+    height: 25px;
+}
+#form label
+{
+    float: left;
+    margin-left: 10px;
+    font-size: 18;
+}
+#form button
+{
+    height: 40px;
+    width: 100px;
+    margin-left: 150px;
+}
+#tabla
+{
+    float:left;
+    margin-top: 20px;
+    width: 590px;
+    /*border: outset 1px;*/
+}
+#tabla fieldset
+{
+    text-align: center;
+    font-size: 18px;    
+}
+#tabla table
+{
+    width: 100%;
+}
+#tabla thead
+{
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+#footer
+{
+    text-align: center;
+    width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    clear: both;
+}
