@@ -26,9 +26,9 @@
     </head>
     <body>
         <header>
-            <a href="../../vistaprincipal.php" id="btnVolver">Menu pricipal</a>
+            <a href="../../vistaprincipal.php" id="btnVolver">Vista pricipal</a>
             <div id="encabezado">
-                SISTEMA CONTROL DE MANTENIMIENTOS - "Cootranscol"
+                SISTEMA CONTROL DE MANTENIMIENTOS - "AutoCare"
             </div>
         </header>
         <selection>

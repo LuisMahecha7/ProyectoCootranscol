@@ -93,7 +93,7 @@
         </div>
 
         <h4 class="titulo-sistema" style="font-family: 'Helvetica', sans-serif; font-size: 20px; font-weight: normal; color: #6c757d; text-align: left; letter-spacing: 1px; margin-top: 20px; position: fixed; top: 160px; left: 20px; z-index: 1000; white-space: nowrap;">
-            Sistema de Registro y Mantenimiento vehícular -
+            Sistema de Registro y Mantenimiento vehícular - AutoCare
         </h4>
             <?php
             session_start(); // Iniciar sesión para acceder a las variables de sesión

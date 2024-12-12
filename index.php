@@ -36,10 +36,10 @@
     <!-- El resto del contenido de la página va aquí -->
 </div>
 
-<h4 class="titulo-sistema"  style="font-family: 'Helvetica', sans-serif;margin-top:0; ;font-size: 20px; font-weight: normal; color: #6c757d; text-align: left; letter-spacing: 1px; margin-top: 20px; position: fixed; top: 160px; left: 20px; z-index: 1000; white-space: nowrap;">
-    Sistema de Registro y Mantenimiento vehícular -
+<h4 class="titulo-sistema" style="font-family: 'Helvetica', sans-serif; margin-top:0; font-size: 20px; font-weight: normal; color: #6c757d; text-align: left; letter-spacing: 1px; margin-top: 20px; position: fixed; top: 160px; left: 20px; z-index: 1000; white-space: nowrap;">
+    Sistema de Registro y Mantenimiento vehícular - AutoCare
 </h4>
-<div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+<div style="position: relative; display: flex; align-items: center; justify-content: center; gap: 20px;">
     <!-- Imagen -->
     <img loading="lazy" decoding="async" width="1024" height="640"
          src="https://cootranscol.com.co/wp-content/uploads/2024/08/bus-banner-principal-1024x640.png"
@@ -51,12 +51,17 @@
                  https://cootranscol.com.co/wp-content/uploads/2024/08/bus-banner-principal-1536x960.png 1536w,
                  https://cootranscol.com.co/wp-content/uploads/2024/08/bus-banner-principal-2048x1280.png 2048w"
          sizes="(max-width: 1024px) 100vw, 1024px">
+
+    <!-- Div blanco para tapar el texto -->
+    <div style="position: absolute; top: 62%; left: 48%; transform: translate(-50%, -50%); background-color: white; width: 150px; height: 30px;"></div>
+
     <!-- Card con mensaje -->
     <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-        <h5 style="margin: 0; font-size: 18px; color: #333;">Bienvenido a Cootranscol</h5>
+        <h5 style="margin: 0; font-size: 18px; color: #333;">Bienvenido a AutoCare</h5>
         <p style="margin-top: 10px; font-size: 14px; color: #666;">Gestiona el mantenimiento y registro de vehículos de manera fácil y eficiente. ¡Comienza ahora!</p>
     </div>
 </div>
+
 <?php
     session_start(); // Iniciar sesión para acceder a las variables de sesión
 
