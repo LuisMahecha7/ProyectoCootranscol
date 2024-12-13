@@ -44,13 +44,6 @@ if ($_POST) {
         $vehiculo->interno = $interno;
         $vehiculo->propietario = $propietario;
         $vehiculo->guardarDatos();
-
-        echo "<script>
-                alert('Datos registrados correctamente');
-                document.addEventListener('DOMContentLoaded', () => {
-                    document.querySelectorAll('input[type=\"text\"], input[type=\"hidden\"]').forEach(input => input.value = '');
-                });
-              </script>";
     }
 } elseif (isset($_GET['borrar'])) {
     $id = $_GET['borrar'];

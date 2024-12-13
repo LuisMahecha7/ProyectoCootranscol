@@ -23,27 +23,35 @@ class Vehiculo{
         }
     }
 
-    public function guardarDatos(){
-        if($this->id > 0){
-            $sql ="UPDATE vehiculos set placa ='{$this->placa}',modelo ='{$this->modelo}',
-            marca ='{$this->marca}',interno ='{$this->interno}',propietario ='{$this->propietario}' WHERE id = '{$this->id}'";
-
-
-            mysqli_query(Conexion::obtenerConexion(),$sql) or die ("Problemas al Actualizar los datos");
-
-            //echo "Datos Actualizados";
-
-        }else{ 
-            $sql="INSERT INTO vehiculos (placa,modelo,marca,interno,propietario)VALUES
-                ('{$this->placa}','{$this->modelo}','{$this->marca}','{$this->interno}',
-                    '{$this->propietario}')";
-
-            mysqli_query(Conexion::obtenerConexion(),$sql) or die ("Problemas al Insertar los datos");
-
-            echo "Datos Insertados";
-        }  
+    private function placaExiste($placa){
+        $conexion = Conexion::obtenerConexion();
+        $sql = "SELECT COUNT(*) as total FROM vehiculos WHERE placa = ?";
+        $stmt = $conexion->prepare($sql);
+        $stmt->bind_param("s", $placa);
+        $stmt->execute();
+        $resultado = $stmt->get_result()->fetch_assoc();
+        return $resultado['total'] > 0;
     }
-
+public function guardarDatos() {
+    $conexion = Conexion::obtenerConexion();
+    if ($this->placa != "" && $this->placaExiste($this->placa) && $this->id == 0) {
+        echo "<script>alert('Verifique la información ingresada, placa ya registrada en el sistema.');</script>";
+        return;
+    }
+    if ($this->id > 0) {
+        $sql = "UPDATE vehiculos SET placa ='{$this->placa}', modelo ='{$this->modelo}', marca ='{$this->marca}', interno ='{$this->interno}', propietario ='{$this->propietario}' WHERE id = '{$this->id}'";
+        mysqli_query($conexion, $sql) or die("Problemas al Actualizar los datos");
+        echo "<script>
+                alert('Datos actualizados correctamente');
+              </script>";
+    } else {
+        $sql = "INSERT INTO vehiculos (placa, modelo, marca, interno, propietario) VALUES ('{$this->placa}', '{$this->modelo}', '{$this->marca}', '{$this->interno}', '{$this->propietario}')";
+        mysqli_query($conexion, $sql) or die("Problemas al Insertar los datos");
+        echo "<script>
+                alert('Datos registrados correctamente');
+              </script>";
+    }
+}
     public function listarDatos(){
         $sql = "SELECT * FROM vehiculos";
 
@@ -76,7 +84,7 @@ fila;
         mysqli_query(Conexion::obtenerConexion(),$sql)
         or die ("Problemas al Borrar los datos");
 
-      //  echo"<script type ='text/javascript'> alert('Datos Eliminados')</script";
+       //echo"<script type ='text/javascript'> alert('Datos Eliminados')</script";
     }
 
     public function cargarDatos($id){
@@ -97,5 +105,4 @@ fila;
     }
 
 }
-
 ?>
